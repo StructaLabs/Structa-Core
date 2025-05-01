@@ -1,0 +1,28 @@
+[package]
+name = "whitelist-tester"
+version = "0.5.6"
+description = ""
+edition = "2025"
+homepage = "https://structalabs.com"
+repository = "https://github.com/StructaLabs/structa-core"
+authors = ["Structa Team <team@structalabs.com>"]
+license = "AGPL-3.0"
+keywords = ["solana", "anchor", "governance", "structa"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "whitelist_tester"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = ">=0.22"
+anchor-spl = ">=0.22"
+locked-voter = { path = "../locked-voter", features = [
+    "cpi"
+], version = "^0.5" }

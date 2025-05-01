@@ -1,0 +1,30 @@
+[package]
+name = "govern"
+version = "0.5.8"
+description = "Handles proposal creation, lifecycle, voting, and execution."
+edition = "2025"
+homepage = "https://strucl"
+repository = "https://github.com/StructaLabs/structa-core"
+authors = ["Structa Team <team@structalabs.com>"]
+license = "AGPL-3.0"
+keywords = ["solana", "anchor", "governance", "structa"]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "govern"
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = ">=0.22"
+anchor-spl = ">=0.22"
+num-traits = "0.2"
+smart-wallet = { version = "^0.11.0", features = ["cpi"] }
+vipers = "^2.0"
+
+[dev-dependencies]
+proptest = { version = "1.0" }
