@@ -28,7 +28,7 @@ Structa is a modular open source protocol built for launching DAOs on Solana. In
 
 Explore the [documentation](https://docs.structalabs.com/) to get started.
 
-## ⚠️ Notice
+## ⚠️ Notice ⚠️
 
 - **Structa is under active development. Interfaces and APIs may evolve.**
 - **This codebase is not audited. Please use with caution.**
